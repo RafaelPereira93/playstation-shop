@@ -4,12 +4,9 @@ export const GlobalContext = React.createContext();
 
 export const GlobalProvider = ({ children }) => {
   const [cart, setCart] = React.useState([]);
-  const [productAlreadyInCart, setProductAlreadyInCart] = React.useState([]);
 
   return (
-    <GlobalContext.Provider
-      value={{ cart, setCart, productAlreadyInCart, setProductAlreadyInCart }}
-    >
+    <GlobalContext.Provider value={{ cart, setCart }}>
       {children}
     </GlobalContext.Provider>
   );
