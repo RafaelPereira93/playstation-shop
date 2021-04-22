@@ -18,12 +18,17 @@ const TitleAndCartHome = () => {
           </styles.WrapperTitleAndCart>
         </Link>
         <styles.WrapperCart>
-          <p>Cart</p>
+          <styles.CartName>Cart</styles.CartName>
           <Link to="/cart">
             <styles.WrapperCartImage cart={cart}>
               <styles.ImageCart src={CartLogo} alt="Image Cart Logo" />
             </styles.WrapperCartImage>
           </Link>
+          {cart.length ? (
+            <styles.CartLength>[ {`${cart.length}`} ]</styles.CartLength>
+          ) : (
+            ""
+          )}
         </styles.WrapperCart>
       </styles.WrapperTitleHome>
     </>

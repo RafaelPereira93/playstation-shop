@@ -52,17 +52,24 @@ export const WrapperCart = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+`;
 
-  & p {
-    color: var(--text-color-primary);
-    font-weight: 500;
-    font-size: 1.1em;
-    user-select: none;
-  }
+export const CartName = styled.p`
+  color: var(--text-color-primary);
+  font-weight: 500;
+  font-size: 1.1em;
+  user-select: none;
 `;
 
 export const ImageCart = styled.img`
   display: block;
   max-width: 28px;
   position: relative;
+`;
+
+export const CartLength = styled.p`
+  color: #68e;
+  font-weight: bold;
+  font-size: 0.9em;
+  user-select: none;
 `;
