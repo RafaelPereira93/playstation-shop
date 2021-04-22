@@ -65,6 +65,7 @@ export const HeadTitle = styled.h2`
 
 export const WrapperContentImage = styled.div`
   display: grid;
+  justify-content: flex-start;
   align-items: center;
   grid-template-columns: 80px 1fr;
   gap: 15px;
@@ -80,16 +81,19 @@ export const WrapperContentImage = styled.div`
     background: transparent;
     grid-row: 1 / 3;
   }
+`;
 
-  & h2 {
-    font-size: 0.9em;
-    color: var(--text-color-primary);
-  }
+export const ProductName = styled.h2`
+  font-size: 1em;
+  color: var(--text-color-primary);
+`;
 
-  & span {
-    color: var(--text-color-primary);
-    font-size: 0.8em;
-  }
+export const RemoveProduct = styled.span`
+  display: inline-block;
+  color: #fb3640;
+  font-size: 0.85em;
+  cursor: pointer;
+  max-width: 50px;
 `;
 
 export const WrapperQuantity = styled.div``;
@@ -103,8 +107,9 @@ export const WrapperContentQuantity = styled.div`
   & button {
     display: block;
     width: 100%;
-    min-width: 15px;
+    min-width: 30px;
     max-width: 30px;
+    min-height: 30px;
     font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
@@ -258,4 +263,30 @@ export const ButtonTotalCost = styled.button`
   &:hover {
     border: 2px solid var(--text-color-primary);
   }
+`;
+
+export const ContinueShopping = styled.div`
+  display: flex;
+  padding-left: 30px;
+  margin-top: 20px;
+
+  & img {
+    display: block;
+    width: 100%;
+    max-width: 25px;
+  }
+
+  & a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color-primary);
+    font-size: 0.85em;
+  }
+`;
+
+export const PromoCodeText = styled.p`
+  margin-top: 10px;
+  color: ${({ messagePromoCode }) =>
+    messagePromoCode === "Valid code" ? "#80ffdb" : "#fb3640"};
 `;
