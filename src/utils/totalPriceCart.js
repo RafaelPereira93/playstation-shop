@@ -1,6 +1,4 @@
 const totalPriceCart = (cartArray, promoCodeMessage = "") => {
-  console.log(promoCodeMessage);
-
   const totalCart = cartArray.reduce((acc, cartItem) => {
     acc += cartItem.quantity * cartItem.price;
     return acc;
