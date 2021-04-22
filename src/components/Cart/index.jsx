@@ -2,6 +2,7 @@ import React from "react";
 import * as styles from "./CartStyles";
 import { GlobalContext } from "../../context/contextProvider";
 import returnUniqueItemsInArray from "../../utils/returnUniqueItemsInArray";
+import totalPriceCart from "../../utils/totalPriceCart";
 
 const HeaderTitleProducts = () => {
   return (
@@ -81,34 +82,42 @@ const CartComponent = () => {
 
   return (
     <>
-      <styles.WrapperCart>
-        <styles.WrapperAddedItens>
-          <HeaderTitleProducts />
-          {cart &&
-            cart.map((product) => (
-              <ItemInCart key={product.id} product={product} />
-            ))}
-        </styles.WrapperAddedItens>
-        <styles.WrapperTotalCart>
-          <styles.WrapperTitleSummary>Order summary</styles.WrapperTitleSummary>
-          <styles.HeaderItemsCountAndTotalPrice>
-            <h3>Items 3</h3>
-            <h3>$ 230.00</h3>
-          </styles.HeaderItemsCountAndTotalPrice>
-          <styles.PromoCode>
-            <styles.TitlePromoCode>Promo Code</styles.TitlePromoCode>
-            <input type="text" />
-            <button>Apply</button>
-          </styles.PromoCode>
-          <styles.WrapperTotalAndCheckout>
-            <styles.WrapperTotalCost>
-              <h3>Total Cost</h3>
-              <h3>$ 270.00</h3>
-            </styles.WrapperTotalCost>
-            <button>Checkout</button>
-          </styles.WrapperTotalAndCheckout>
-        </styles.WrapperTotalCart>
-      </styles.WrapperCart>
+      {cart.length ? (
+        <styles.WrapperCart>
+          <styles.WrapperAddedItens>
+            <HeaderTitleProducts />
+            {cart &&
+              cart.map((product) => (
+                <ItemInCart key={product.id} product={product} />
+              ))}
+          </styles.WrapperAddedItens>
+          <styles.WrapperTotalCart>
+            <styles.WrapperTitleSummary>
+              Order summary
+            </styles.WrapperTitleSummary>
+            <styles.HeaderItemsCountAndTotalPrice>
+              <styles.ItemsLength>Items {cart.length}</styles.ItemsLength>
+              <styles.ItemPrice>$ {totalPriceCart(cart)}</styles.ItemPrice>
+            </styles.HeaderItemsCountAndTotalPrice>
+            <styles.PromoCode>
+              <styles.TitlePromoCode>Promo Code</styles.TitlePromoCode>
+              <styles.InputPromo type="text" />
+              <styles.PromoCodeButton>Apply</styles.PromoCodeButton>
+            </styles.PromoCode>
+            <styles.WrapperTotalAndCheckout>
+              <styles.WrapperTotalCost>
+                <styles.TextTotalCost>Total Cost</styles.TextTotalCost>
+                <styles.TotalCost>$ {totalPriceCart(cart)}</styles.TotalCost>
+              </styles.WrapperTotalCost>
+              <styles.ButtonTotalCost>Checkout</styles.ButtonTotalCost>
+            </styles.WrapperTotalAndCheckout>
+          </styles.WrapperTotalCart>
+        </styles.WrapperCart>
+      ) : (
+        <styles.NoItemsInCart>
+          There are no items in your cart.
+        </styles.NoItemsInCart>
+      )}
     </>
   );
 };

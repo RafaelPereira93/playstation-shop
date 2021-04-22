@@ -9,8 +9,35 @@ export const WrapperCart = styled.main`
   margin: 0 auto;
 `;
 
+export const NoItemsInCart = styled.h3`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--text-color-primary);
+  font-family: var(--roboto-font);
+  font-size: 1.5em;
+  text-align: center;
+`;
+
 export const WrapperAddedItens = styled.div`
   width: 100%;
+  max-height: 600px;
+  overflow-y: auto;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--purple-color);
+    border-radius: 5px;
+  }
 `;
 
 export const HeaderTitleProducts = styled.div`
@@ -125,7 +152,7 @@ export const WrapperContentTotal = styled.div`
 
 export const WrapperTotalCart = styled.div`
   width: 100%;
-  background: green;
+  max-height: 400px;
   padding: 0 20px;
 `;
 
@@ -138,26 +165,57 @@ export const HeaderItemsCountAndTotalPrice = styled.div`
   margin-top: 25px;
   display: grid;
   grid-template-columns: 70% 1fr;
+`;
 
-  & h3 {
-    color: var(--text-color-primary);
-    font-size: 1em;
-  }
+export const ItemsLength = styled.h3`
+  color: var(--text-color-primary);
+  font-size: 1em;
+`;
+
+export const ItemPrice = styled.h3`
+  color: var(--text-color-primary);
+  font-size: 1em;
+  text-align: right;
 `;
 
 export const PromoCode = styled.div`
   margin-top: 25px;
+`;
 
-  & input {
-    display: block;
-    width: 100%;
-    padding: 6px;
-    margin-top: 8px;
-    outline: none;
+export const InputPromo = styled.input`
+  display: block;
+  width: 100%;
+  padding: 6px;
+  margin-top: 8px;
+  outline: none;
+  border: 2px solid transparent;
+  transition: 0.2s;
+  font-family: var(--roboto-font);
+  font-size: 0.9em;
+  font-weight: 500;
+
+  &:focus {
+    border: 2px solid var(--purple-color);
   }
+`;
 
-  & button {
-    margin-top: 8px;
+export const PromoCodeButton = styled.button`
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  margin-top: 8px;
+  padding: 8px 0;
+  background: var(--purple-color);
+  color: var(--text-color-primary);
+  border: none;
+  font-size: 0.9em;
+  font-family: var(--roboto-font);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+
+  &:hover {
+    border: 2px solid var(--text-color-primary);
   }
 `;
 
@@ -168,20 +226,36 @@ export const TitlePromoCode = styled.h3`
 
 export const WrapperTotalAndCheckout = styled.div`
   margin-top: 50px;
-
-  & button {
-    display: block;
-    width: 100%;
-    margin-top: 30px;
-  }
 `;
 
 export const WrapperTotalCost = styled.div`
   display: flex;
   justify-content: space-between;
+`;
 
-  & h3 {
-    color: var(--text-color-primary);
-    font-size: 1em;
+export const TextTotalCost = styled.h3`
+  color: var(--text-color-primary);
+`;
+
+export const TotalCost = styled.h3`
+  color: #80ffdb;
+`;
+
+export const ButtonTotalCost = styled.button`
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 0;
+  background: var(--purple-color);
+  color: var(--text-color-primary);
+  border: none;
+  font-size: 1em;
+  font-family: var(--roboto-font);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+
+  &:hover {
+    border: 2px solid var(--text-color-primary);
   }
 `;
