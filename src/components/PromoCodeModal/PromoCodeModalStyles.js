@@ -88,7 +88,7 @@ export const CloseModal = styled.div`
 
   border-radius: 50%;
   border: 3px solid var(--text-color-primary);
-  box-shadow: 0 0 8px 1px var(--text-color-primary);
+  box-shadow: 0 0 4px 1px var(--text-color-primary);
 
   user-select: none;
   cursor: pointer;
