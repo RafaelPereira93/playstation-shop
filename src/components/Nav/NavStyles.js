@@ -16,6 +16,14 @@ export const NavWrapper = styled.nav`
     gap: 40px;
     padding: 20px 0;
   }
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    & ul {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
 `;
 
 export const LinkNav = styled.li`
@@ -30,4 +38,8 @@ export const LinkNav = styled.li`
   text-transform: uppercase;
   border: 3px solid
     ${({ current }) => (current ? "#fff" : "var(--purple-color)")};
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    padding: 5px 10px;
+  }
 `;

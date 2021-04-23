@@ -8,6 +8,11 @@ export const WrapperProducts = styled.main`
   margin: 0 auto 50px;
   padding: 30px;
   gap: 30px;
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 30px 15px;
+  }
 `;
 
 // PRODUCT

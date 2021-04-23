@@ -107,10 +107,12 @@ const CartComponent = () => {
       {cart.length ? (
         <styles.WrapperCart>
           <styles.WrapperAddedItens>
-            <HeaderTitleProducts />
             {cart &&
               cart.map((product) => (
-                <ItemInCart key={product.id} product={product} />
+                <>
+                  <HeaderTitleProducts />
+                  <ItemInCart key={product.id} product={product} />
+                </>
               ))}
             <styles.ContinueShopping>
               <Link to="/">

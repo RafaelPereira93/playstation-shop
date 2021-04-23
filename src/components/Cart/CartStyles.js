@@ -8,6 +8,10 @@ export const WrapperCart = styled.main`
   max-width: 1200px;
   padding: 0 10px;
   margin: 0 auto;
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const NoItemsInCart = styled.h3`
@@ -44,6 +48,10 @@ export const WrapperAddedItens = styled.div`
 export const HeaderTitleProducts = styled.div`
   display: grid;
   grid-template-columns: 40% 20% 20% 20%;
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 // ITEM

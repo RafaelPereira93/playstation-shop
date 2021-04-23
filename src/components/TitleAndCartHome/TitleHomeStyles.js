@@ -9,6 +9,13 @@ export const WrapperTitleHome = styled.div`
   align-items: center;
   gap: 30px;
   padding: 50px 20px;
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    padding: 50px 10px;
+  }
 `;
 
 export const WrapperTitleAndCart = styled.div`
@@ -21,6 +28,10 @@ export const TitleHome = styled.h1`
   font-family: var(--roboto-font);
   color: var(--text-color-primary);
   text-align: center;
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    font-size: max(1.1em, 3.8vw);
+  }
 `;
 
 export const ImageLogoGaming = styled.img`
@@ -28,6 +39,10 @@ export const ImageLogoGaming = styled.img`
   display: block;
   margin: 0;
   max-width: 45px;
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    max-width: 40px;
+  }
 `;
 
 export const WrapperCartImage = styled.div`
@@ -52,6 +67,10 @@ export const WrapperCart = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export const CartName = styled.p`
@@ -72,4 +91,8 @@ export const CartLength = styled.p`
   font-weight: bold;
   font-size: 0.9em;
   user-select: none;
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    font-size: max(14px, 1.5vw);
+  }
 `;
