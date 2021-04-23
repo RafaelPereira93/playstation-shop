@@ -64,7 +64,7 @@ export const WrapperItem = styled.div`
     padding: 10px;
   }
 
-  @media (min-width: 300px) and (max-width: 768px) {
+  @media (min-width: 300px) and (max-width: 500px) {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 10px;
     gap: 15px;
@@ -195,6 +195,16 @@ export const WrapperContentQuantity = styled.div`
       min-width: 25px;
       max-width: 15px;
       min-height: 15px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 920px) {
+    gap: 10px;
+
+    & button {
+      min-width: 20px;
+      max-width: 10px;
+      min-height: 10px;
     }
   }
 `;
