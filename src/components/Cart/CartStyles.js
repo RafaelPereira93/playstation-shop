@@ -51,6 +51,7 @@ export const HeaderTitleProducts = styled.div`
 
   @media (min-width: 300px) and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
+    visibility: hidden;
   }
 `;
 
@@ -92,6 +93,10 @@ export const HeadTitle = styled.h2`
   @media (min-width: 300px) and (max-width: 768px) {
     font-size: ${({ mobile }) => (mobile === "true" ? "1em" : "1.2em")};
     text-align: ${({ mobile }) => (mobile === "true" ? "center" : "")};
+  }
+
+  @media (min-width: 769px) {
+    ${({ mobile }) => mobile === "true" && "display: none"};
   }
 `;
 

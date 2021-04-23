@@ -118,7 +118,7 @@ const CartComponent = () => {
       {cart.length ? (
         <styles.WrapperCart>
           <styles.WrapperAddedItens>
-            {/* <HeaderTitleProducts /> */}
+            <HeaderTitleProducts mobile="true" />
             {cart &&
               cart.map((product) => (
                 <ItemInCart key={product.id} product={product} />
