@@ -62,6 +62,24 @@ export const WrapperItem = styled.div`
   & div {
     padding: 10px;
   }
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+    gap: 15px;
+    grid-column-gap: 20px;
+
+    & div {
+      padding: 0;
+      margin-bottom: 10px;
+      justify-content: center;
+
+      & p {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
 `;
 
 export const WrapperProductImage = styled.div``;
@@ -70,6 +88,11 @@ export const HeadTitle = styled.h2`
   color: var(--text-color-primary);
   font-size: 1.2em;
   text-align: ${({ align }) => (align === "center" ? "center" : "left")};
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    font-size: ${({ mobile }) => (mobile === "true" ? "1em" : "1.2em")};
+    text-align: ${({ mobile }) => (mobile === "true" ? "center" : "")};
+  }
 `;
 
 export const WrapperContentImage = styled.div`
@@ -90,11 +113,26 @@ export const WrapperContentImage = styled.div`
     background: transparent;
     grid-row: 1 / 3;
   }
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    & img {
+      width: 60px;
+      height: 60px;
+      grid-row: 1;
+      margin: 0 auto;
+    }
+  }
 `;
 
 export const ProductName = styled.h2`
   font-size: 1em;
   color: var(--text-color-primary);
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const RemoveProduct = styled.span`
@@ -103,6 +141,16 @@ export const RemoveProduct = styled.span`
   font-size: 0.85em;
   cursor: pointer;
   max-width: 50px;
+  visibility: ${({ mobile }) => (mobile === "true" ? "hidden" : "visible")};
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    max-width: 100%;
+    text-align: center;
+    visibility: ${({ mobile }) => (mobile === "true" ? "visible" : "hidden")};
+    ${({ mobile }) => mobile === "true" && "display: flex"};
+    ${({ mobile }) => mobile === "true" && "justify-content: center"};
+    ${({ mobile }) => mobile === "true" && "padding: 0 10px 30px 0"};
+  }
 `;
 
 export const WrapperQuantity = styled.div``;
@@ -130,6 +178,19 @@ export const WrapperContentQuantity = styled.div`
   & span {
     color: var(--text-color-primary);
   }
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+
+    & button {
+      min-width: 25px;
+      max-width: 15px;
+      min-height: 15px;
+    }
+  }
 `;
 
 export const WrapperPrice = styled.div``;
@@ -142,7 +203,6 @@ export const WrapperContentPrice = styled.div`
 
   & p {
     color: var(--text-color-primary);
-
     font-weight: bold;
   }
 `;
@@ -157,7 +217,6 @@ export const WrapperContentTotal = styled.div`
 
   & p {
     color: var(--text-color-primary);
-
     font-weight: bold;
   }
 `;
@@ -168,6 +227,11 @@ export const WrapperTotalCart = styled.div`
   width: 100%;
   max-height: 400px;
   padding: 0 20px;
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    padding: 50px 20px;
+    margin-bottom: 50px;
+  }
 `;
 
 export const WrapperTitleSummary = styled.h2`

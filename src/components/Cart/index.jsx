@@ -52,6 +52,7 @@ const ItemInCart = ({ product }) => {
     <>
       <styles.WrapperItem>
         <styles.WrapperProductImage>
+          <styles.HeadTitle mobile="true">Product Details</styles.HeadTitle>
           <styles.WrapperContentImage>
             <img src={product.image} alt={product.name} />
             <styles.ProductName>{product.name}</styles.ProductName>
@@ -65,6 +66,7 @@ const ItemInCart = ({ product }) => {
         </styles.WrapperProductImage>
 
         <styles.WrapperQuantity>
+          <styles.HeadTitle mobile="true">Quantity</styles.HeadTitle>
           <styles.WrapperContentQuantity>
             <button onClick={removeProductQuantity} data-quantity="-">
               -
@@ -77,17 +79,26 @@ const ItemInCart = ({ product }) => {
         </styles.WrapperQuantity>
 
         <styles.WrapperPrice>
+          <styles.HeadTitle mobile="true">Price</styles.HeadTitle>
           <styles.WrapperContentPrice>
             <p>$ {product.price}</p>
           </styles.WrapperContentPrice>
         </styles.WrapperPrice>
 
         <styles.WrapperTotal>
+          <styles.HeadTitle mobile="true">Total</styles.HeadTitle>
           <styles.WrapperContentTotal>
             <p>$ {product.price * product.quantity}</p>
           </styles.WrapperContentTotal>
         </styles.WrapperTotal>
       </styles.WrapperItem>
+      <styles.RemoveProduct
+        onClick={removeItem}
+        data-product-id={product.id}
+        mobile="true"
+      >
+        Remove
+      </styles.RemoveProduct>
     </>
   );
 };
@@ -107,12 +118,10 @@ const CartComponent = () => {
       {cart.length ? (
         <styles.WrapperCart>
           <styles.WrapperAddedItens>
+            {/* <HeaderTitleProducts /> */}
             {cart &&
               cart.map((product) => (
-                <>
-                  <HeaderTitleProducts />
-                  <ItemInCart key={product.id} product={product} />
-                </>
+                <ItemInCart key={product.id} product={product} />
               ))}
             <styles.ContinueShopping>
               <Link to="/">
