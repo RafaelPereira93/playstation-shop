@@ -136,7 +136,7 @@ export const ProductName = styled.h2`
 `;
 
 export const RemoveProduct = styled.span`
-  display: inline-block;
+  display: ${({ mobile }) => (mobile === "true" ? "inline-block" : "none")};
   color: #fb3640;
   font-size: 0.85em;
   cursor: pointer;
@@ -149,6 +149,7 @@ export const RemoveProduct = styled.span`
     visibility: ${({ mobile }) => (mobile === "true" ? "visible" : "hidden")};
     ${({ mobile }) => mobile === "true" && "display: flex"};
     ${({ mobile }) => mobile === "true" && "justify-content: center"};
+    ${({ mobile }) => mobile === "true" && "padding: 0 10px 30px 0"};
     ${({ mobile }) => mobile === "true" && "padding: 0 10px 30px 0"};
   }
 `;
@@ -229,7 +230,7 @@ export const WrapperTotalCart = styled.div`
   padding: 0 20px;
 
   @media (min-width: 300px) and (max-width: 768px) {
-    padding: 50px 20px;
+    padding: 50px 5px;
     margin-bottom: 50px;
   }
 `;
@@ -274,6 +275,10 @@ export const InputPromo = styled.input`
 
   &:focus {
     border: 2px solid var(--purple-color);
+  }
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    max-width: 300px;
   }
 `;
 
@@ -336,6 +341,10 @@ export const ButtonTotalCost = styled.button`
   &:hover {
     border: 2px solid var(--text-color-primary);
   }
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    max-width: 300px;
+  }
 `;
 
 export const ContinueShopping = styled.div`
@@ -355,6 +364,12 @@ export const ContinueShopping = styled.div`
     gap: 10px;
     color: var(--text-color-primary);
     font-size: 0.85em;
+  }
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    & a {
+      font-size: max(14px, 2.5vw);
+    }
   }
 `;
 
