@@ -4,7 +4,6 @@ import Nav from "../Nav";
 import DataProject from "../../data-project";
 import { GlobalContext } from "../../context/contextProvider";
 import verifyIsProductExistsInCart from "../../utils/verifyIfProductExistsInCart";
-import { motion } from "framer-motion";
 
 const Product = ({ data, cart, setCart }) => {
   const handleCart = () => {

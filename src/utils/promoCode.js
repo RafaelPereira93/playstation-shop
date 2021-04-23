@@ -28,3 +28,15 @@ const promoCode = (promoCodeUser) => {
 };
 
 export default promoCode;
+
+class DateClass {
+  get monthAndFullYear() {
+    const date = new Date();
+    const currentMonth = date.getMonth();
+    const month = monthNames[currentMonth];
+    const year = date.getFullYear();
+    return { month, year };
+  }
+}
+
+export const modalPromoCode = new DateClass().monthAndFullYear;

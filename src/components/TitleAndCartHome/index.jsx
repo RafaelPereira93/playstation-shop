@@ -13,7 +13,7 @@ const TitleAndCartHome = () => {
       <styles.WrapperTitleHome>
         <Link to="/">
           <styles.WrapperTitleAndCart>
-            <styles.TitleHome>My Playstation Shop</styles.TitleHome>
+            <styles.TitleHome>My PlayStation Shop</styles.TitleHome>
             <styles.ImageLogoGaming src={LogoGaming} alt="Logo Gaming" />
           </styles.WrapperTitleAndCart>
         </Link>
