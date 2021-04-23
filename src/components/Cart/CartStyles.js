@@ -283,7 +283,8 @@ export const InputPromo = styled.input`
   }
 
   @media (min-width: 300px) and (max-width: 768px) {
-    max-width: 300px;
+    max-width: 150px;
+    padding: 2px;
   }
 `;
 
@@ -304,6 +305,11 @@ export const PromoCodeButton = styled.button`
 
   &:hover {
     border: 2px solid var(--text-color-primary);
+  }
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    max-width: 100px;
+    padding: 5px 0;
   }
 `;
 
@@ -348,7 +354,7 @@ export const ButtonTotalCost = styled.button`
   }
 
   @media (min-width: 300px) and (max-width: 768px) {
-    max-width: 300px;
+    max-width: 150px;
   }
 `;
 
