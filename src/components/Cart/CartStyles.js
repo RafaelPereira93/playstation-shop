@@ -93,6 +93,7 @@ export const HeadTitle = styled.h2`
   @media (min-width: 300px) and (max-width: 768px) {
     font-size: ${({ mobile }) => (mobile === "true" ? "1em" : "1.2em")};
     text-align: ${({ mobile }) => (mobile === "true" ? "center" : "")};
+    color: var(--purple-color);
   }
 
   @media (min-width: 769px) {
@@ -154,7 +155,6 @@ export const RemoveProduct = styled.span`
     visibility: ${({ mobile }) => (mobile === "true" ? "visible" : "hidden")};
     ${({ mobile }) => mobile === "true" && "display: flex"};
     ${({ mobile }) => mobile === "true" && "justify-content: center"};
-    ${({ mobile }) => mobile === "true" && "padding: 0 10px 30px 0"};
     ${({ mobile }) => mobile === "true" && "padding: 0 10px 30px 0"};
   }
 `;
