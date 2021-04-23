@@ -142,7 +142,7 @@ export const ProductName = styled.h2`
 `;
 
 export const RemoveProduct = styled.span`
-  display: ${({ mobile }) => (mobile === "true" ? "inline-block" : "none")};
+  display: ${({ mobile }) => (mobile === "true" ? "none" : "inline-block")};
   color: #fb3640;
   font-size: 0.85em;
   cursor: pointer;
