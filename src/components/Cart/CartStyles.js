@@ -93,7 +93,7 @@ export const HeadTitle = styled.h2`
   @media (min-width: 300px) and (max-width: 768px) {
     font-size: ${({ mobile }) => (mobile === "true" ? "1em" : "1.2em")};
     text-align: ${({ mobile }) => (mobile === "true" ? "center" : "")};
-    color: var(--purple-color);
+    color: #68e;
   }
 
   @media (min-width: 769px) {
