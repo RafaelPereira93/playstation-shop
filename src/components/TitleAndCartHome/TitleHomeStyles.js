@@ -30,7 +30,7 @@ export const TitleHome = styled.h1`
   text-align: center;
 
   @media (min-width: 300px) and (max-width: 768px) {
-    font-size: max(1.1em, 3.8vw);
+    font-size: max(1.35em, 3.8vw);
   }
 `;
 
